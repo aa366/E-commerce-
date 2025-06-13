@@ -1,0 +1,60 @@
+.addProductContaner {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  position: absolute;
+  background: var(--background-color);
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  border-radius: 0.4em;
+  gap: 1em;
+  padding-top: 2.5em;
+  transition: all 0.3s linear;
+
+  .addProductClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  input {
+    border: 2px solid var(--text-color);
+    padding: 0.25em;
+    border-radius: 0.4em;
+    font-size: 1.2rem;
+  }
+  button {
+    border: 1px solid var(--text-color);
+    background: var(--primary-color);
+    padding: 0.5em;
+    border-radius: 0.4em;
+    color: var(--background-color);
+    cursor: pointer;
+    &:hover {
+      background: var(--hover-color);
+    }
+    &:active {
+      transform: scale(1.02);
+    }
+  }
+}

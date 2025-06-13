@@ -1,0 +1,160 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1em 2em;
+  background-color: var(--background-color2);
+  position: sticky;
+  top: 0;
+  height: 10dvh;
+  z-index: 1000;
+  width: 100%;
+}
+.logo {
+  cursor: pointer;
+  width: 4.5%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.search {
+  display: flex;
+  width: 45%;
+  height: 2.5em;
+  aspect-ratio: 12/1;
+  align-items: center;
+
+  .active {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #000;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+  }
+  select {
+    height: 100%;
+    border-radius: 0.5em 0 0 0.5em;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    padding: 0.5em;
+    text-transform: capitalize;
+    z-index: 10;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+      text-transform: capitalize;
+    }
+
+    option {
+      background: #000;
+      color: #007bff;
+      text-align: center;
+
+      cursor: pointer;
+    }
+  }
+  a {
+    height: 100%;
+    z-index: 10;
+    width: 15%;
+    border-radius: 0 0.5em 0.5em 0;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 10;
+    padding: 0.5em 1em;
+    background: var(--secondary-color);
+    font-size: 1.2rem;
+    color: var(--background-color);
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+.language {
+  select {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    border: solid 2px var(--text-color);
+    border-radius: 3px;
+    height: 100%;
+    cursor: pointer;
+    padding: 0.3em;
+
+    &hover {
+      background: var(--primary-color);
+    }
+    option {
+      cursor: pointer;
+      padding: 0.3em;
+      background: var(--background-color);
+    }
+  }
+}
+.profile {
+  width: 3%;
+  cursor: pointer;
+  overflow: hidden;
+  &:active {
+    transform: scale(1.1);
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+.returns {
+  text-transform: capitalize;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+.cart {
+  width: 3%;
+  cursor: pointer;
+  .icon {
+    width: 100%;
+    height: 100%;
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

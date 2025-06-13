@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --background-color2: #c4c4c4;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --hover-color: #0056b3;
+}
+.profileContainer {
+  width: 100%;
+  height: auto;
+  min-height: 100dvh;
+  // background: #000;
+  background: #1229839a;
+}
+.bannerContainer {
+  position: relative;
+  width: 80%;
+  justify-self: center;
+  margin-bottom: 15%;
+}
+.infosContainer {
+  width: 60%;
+  background: #f2f4f7;
+  padding: 1em;
+  border-radius: 0.4em;
+  display: flex;
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  transform: translate(50%, 0);
+  margin-bottom: 1px;
+  min-width: auto;
+  img {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.banner {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  z-index: -10;
+  border-radius: 0 0 0.4em 0.4em;
+}
+.infos {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7em;
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+  .profileControll {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-items: space-between;
+    align-items: center;
+    transform: translate(0, 30%);
+    padding: 0 0.3em;
+    button {
+      cursor: pointer;
+      padding: 0.5em;
+      background-color: #1229839a;
+      text-transform: capitalize;
+      border-radius: 0.2em;
+      &:hover {
+        background-color: #122983;
+        color: white;
+      }
+      &:active {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.addProductContaner {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  position: absolute;
+  background: var(--background-color);
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  border-radius: 0.4em;
+  gap: 1em;
+  padding-top: 2.5em;
+  transition: all 0.3s linear;
+
+  .addProductClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  input {
+    border: 2px solid var(--text-color);
+    padding: 0.25em;
+    border-radius: 0.4em;
+    font-size: 1.2rem;
+  }
+  button {
+    border: 1px solid var(--text-color);
+    background: var(--primary-color);
+    padding: 0.5em;
+    border-radius: 0.4em;
+    color: var(--background-color);
+    cursor: pointer;
+    &:hover {
+      background: var(--hover-color);
+    }
+    &:active {
+      transform: scale(1.02);
+    }
+  }
+}
