@@ -14,8 +14,10 @@ import {
   Timestamp,
 } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Cont = ({ elementRef }) => {
+   const router = useRouter();
   const usersData = collection(db, "users");
   const productData = collection(db, "Products");
 
@@ -63,33 +65,35 @@ useEffect(() => {
     fetchProducts();
   }, []);
 
-  const handleAddProduct = async () => {
-    try {
-       const userId = users.length > 0 ? users[0].id : "";
-       const dateNow = Timestamp.now();
+const handleAddProduct = async () => {
+  try {
+    const userId = users.length > 0 ? users[0].id : "";
+    const dateNow = Timestamp.now();
 
-      setAddProductData((prev) => ({
-        ...prev,
-        userUID: userId,
-        date : dateNow,
-      }));
-      const docRef = await addDoc(productData, addProductData);
-      handleHideAddProduct();
+    // Build the product object with all fields
+    const productToAdd = {
+      ...addProductData,
+      userUID: userId,
+      date: dateNow,
+    };
 
-       await updateDoc(doc(db, "Products", docRef.id), {
+    const docRef = await addDoc(productData, productToAdd);
+    handleHideAddProduct();
+
+    await updateDoc(doc(db, "Products", docRef.id), {
       productUID: docRef.id,
     });
-    const newUserProduces = [...users[0].products,docRef.id,]
-       await updateDoc(doc(db, "users", users[0].id), {
-      products:newUserProduces ,
+
+    const newUserProduces = [...(users[0].products || []), docRef.id];
+    await updateDoc(doc(db, "users", users[0].id), {
+      products: newUserProduces,
     });
+      router.refresh();
 
-     
-
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  } catch (error) {
+    console.error(error);
+  }
+};
   const handleHideAddProduct = () => {
     if (elementRef && elementRef.current) {
       elementRef.current.classList.add("hide");

@@ -1,0 +1,116 @@
+.mainCont {
+  width: 100%;
+  height: 100%;
+  background: #00000010;
+  display: flex;
+}
+.imgsCont {
+  width: 50%;
+  display: flex;
+  padding: 2em;
+
+  img {
+    object-fit: contain;
+    padding: 1em;
+    border-radius: 0.5em;
+    aspect-ratio: 1/1;
+    width: 85%;
+  }
+  div {
+    padding: 0.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+
+      padding: 0.4em;
+    }
+  }
+  .active {
+    border: 2px solid orangered;
+    box-shadow: 0 0 5px var(--primary);
+  }
+}
+
+.infosCont {
+  width: 50%;
+  display: flex;
+  padding: 2em;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1.2rem;
+  .UID {
+    display: flex;
+    justify-content: space-between;
+    background-color: #00000044;
+    padding: 0.5em;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 0.4em;
+    &:hover {
+      background-color: #0000006c;
+    }
+  }
+  .subCont {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    div {
+      display: flex;
+      gap: 0.7em;
+    }
+    span {
+      border: 1px solid black;
+      padding: 0.1em;
+      border-radius: 0.2em;
+      text-transform: capitalize;
+      cursor: pointer;
+      user-select: none;
+      &:hover {
+        background: #0000002a;
+      }
+    }
+    h4 {
+      font-weight: 500;
+    }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  .priceCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        font-size: 1.7rem;
+        &:hover{
+            color: #007bff;
+        }
+    }
+    div{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    button{
+        border: 2px black solid;
+        padding: .2em .5em;
+        border-radius: .4em;
+        background-color: #007bffa1 ;
+        user-select: none;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover{
+            background-color: #007bff;
+        }
+        &:active{
+            transform: scale(1.01);
+        }
+
+    }
+  }
+}

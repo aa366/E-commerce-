@@ -3,11 +3,19 @@
     width: 100%;
     padding: 3em;
     display: flex;
+    gap: 1em;
 
 }
 .product{
     width:17%;
- 
+    img{
+
+        object-fit: contain;
+       
+        width: 100%;
+        height: 120px;
+        
+    }
     cursor: pointer;
     background-color: rgba(0, 255, 255, 0.856);
     padding: 1em;
