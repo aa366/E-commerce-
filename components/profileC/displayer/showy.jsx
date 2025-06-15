@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import Link from "next/link"
+
 const Showy = () => {
   const usersData = collection(db, "users");
   const productData = collection(db, "Products");

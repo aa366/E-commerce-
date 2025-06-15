@@ -1,0 +1,62 @@
+.bannerCont {
+  width: 70%;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  padding: 1em;
+  margin-top: 1em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  aspect-ratio: 2/1;
+  margin-bottom:1em ;
+  gap: .5em;
+  .arrow{
+    font-size: 2rem;
+    cursor: pointer;
+    &:hover{
+        color: #00000083;
+    }
+    &:active{
+        transform: scale(1.05);
+    }
+  }
+}
+.bannerImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // or use 'cover' for cropping effect
+    display: block;
+    border-radius: .5em;
+  }
+
+ 
+}
+.bannerControl {
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  position: absolute;
+  bottom: 1%;
+}
+.span {
+  display: flex;
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background: #333;
+  cursor: pointer;
+}
+.imgMainCont{
+    width: 100%;
+}
