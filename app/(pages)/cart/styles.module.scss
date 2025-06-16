@@ -75,7 +75,7 @@ cursor: pointer;
 .operations{
     display: flex;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 0em;
       padding: .5em;
 
 
@@ -98,4 +98,130 @@ cursor: pointer;
         }
     }
 
+}
+@media (max-width:900px) {
+    .mainCont{
+
+ padding: 1em;
+ 
+
+
+}
+.productsCont{
+   padding: 1em;
+    
+     
+
+}
+.itemCont{
+
+font-size: 1rem;
+
+padding: .3em;
+gap: .3em;
+
+
+
+img{
+    width: 15vw;
+    height: 15vw;
+    object-fit: contain;
+}
+
+.end{
+    font-size: 2.5rem;
+   
+}
+.quantity{
+   gap: 0;
+   font-size: 1.3rem;
+    
+}
+.arrowCont{
+    
+}
+.arrow{
+font-size: 1rem;
+
+
+}
+}
+.operations{
+    
+
+
+    button{
+     
+        padding: .5em;
+       
+        font-size: 1rem;
+        text-transform: capitalize;
+
+     
+    }
+
+}
+}
+@media (max-width:500px) {
+    .mainCont{
+
+ padding: .3em;
+ overflow: hidden;
+
+
+}
+.productsCont{
+   padding: .3em;
+    
+     
+
+}
+.itemCont{
+
+font-size: 1rem;
+
+padding: .3em;
+gap: .3em;
+
+
+
+img{
+    width: 15vw;
+    height: 15vw;
+    object-fit: contain;
+}
+
+.end{
+    font-size: 2.5rem;
+   
+}
+.quantity{
+   gap: 0;
+   font-size: 1.3rem;
+    
+}
+.arrowCont{
+    
+}
+.arrow{
+font-size: 1rem;
+
+
+}
+}
+.operations{
+    
+
+
+    button{
+     
+        padding: .5em;
+       
+        font-size: 1rem;
+        text-transform: capitalize;
+
+     
+    }
+
+}
 }

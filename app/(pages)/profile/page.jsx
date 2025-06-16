@@ -92,7 +92,7 @@ const page = () => {
           <div className={styles.infos}>
             <div>
               <h3>Abdelwahab Anwr</h3>{" "}
-              <button>
+              <button style={{display:"none"}}>
                 <FaPen />
               </button>
             </div>

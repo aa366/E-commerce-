@@ -109,7 +109,7 @@ const page = () => {
       <div className={styles.operations}>
         <button onClick={handleClick}>delete all </button>
 
-        <Link href={`/purchase/cart`}>
+        <Link href={`product/purchase/cart`}>
           <button>purchase</button>
         </Link>
       </div>
